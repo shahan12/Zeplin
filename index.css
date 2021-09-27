@@ -1,0 +1,984 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+  }
+  :focus {
+    outline: 0;
+  }
+  .wrapper{
+    width: 100%;
+    height: 100%;
+  }
+  body{
+    font-family: Roboto, sans-serif;
+    background-color: #f3f6f9;
+    width: 100%;
+    height: 100%;
+  }
+  .cloud{
+    color: #e20074;
+    font-size: 1.2rem;
+  }
+  .ACCESS {
+     color: #3e3e3e;
+     margin-left: 0.2rem;
+     font-size: 1.2rem;
+    }
+    .Shape {
+      
+      margin-right: 0.5rem
+      
+      }
+    
+  .header{
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1.7rem 0.5rem 2rem;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      position: sticky;
+  }
+  .leftc{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+  }
+  .rightc{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .user{
+    align-items: revert;
+      width: 4rem;
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.1rem;
+  }
+  .name{
+    margin: 0 0 2px;
+    width: 6rem;
+    font-size: 0.8rem;
+    color: #252a31;
+  }
+  .TMobiles{
+      
+      justify-content: center;
+    opacity: 0.5;
+    
+    font-size: 0.5rem;
+    font-weight: bold;
+    
+    text-align: right;
+    color: #252a31;
+  
+  }
+  .sidebar{
+      display: flex;
+      flex-direction: column;
+      width: 13.5rem;
+      padding-top: 1.8rem;
+      background-color: #fff;
+      
+  }
+  .groups{
+    margin: 0 4rem 0.6rem 1.5rem;
+    
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+    text-align: left;
+    color: #e20074;
+  
+  }
+  .Line-11 {
+      width: 12.5rem;
+      height: 0.06rem;
+      margin: 1.5rem 0.6rem 1.5rem;
+      border: solid 1px #f2f4f8;
+    }
+    .Line-12 {
+      width: 12.5rem;
+      height: 0.06rem;
+      margin: 1.5rem 0.6rem 0;
+      border: solid 1px #f2f4f8;
+    }
+    
+  .You-dont-have-acces {
+      padding: 0 1.5rem;
+      opacity: 0.4; 
+      font-size: 0.75rem;
+      text-align: left;
+      color: #000;
+    }
+    .Your-Requests {
+      padding: 0 6.5rem 0.5rem 1.5rem;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: bold;
+      
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #e20074;
+    }
+    .Pending {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.2rem 0.2rem;
+     width: 100%;
+      
+      font-size: 0.75rem;
+      font-weight: bold;
+      line-height: 2.23;
+      color: #cbcbcb;
+      
+    }
+    .Rectangle-Copy {
+     
+      display: flex;
+      margin: 0.11rem 0 0;
+      padding: 0.18rem 0.6rem 0.18rem 1.5rem;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .Pending:hover .number0{
+      cursor: pointer;
+      background-color: #ea168b;
+    }
+    .Pending:hover {
+      cursor: pointer;
+      color: black;
+    }
+    .number{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.37rem;
+      height: 1.12rem;
+      margin: 0.01rem 0 0.01rem 6.5rem;
+      padding: 0.01rem 0.01rem;
+      border-radius: 12px;
+      background-color: #ea168b;
+      color: white;
+    }
+    .Approved {
+      display: flex;
+      margin: 0.2rem 0.2rem;
+      
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 2.23;
+      color: #cbcbcb;
+    }
+    .Rejected{
+      display: flex;
+      
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 2.23;
+      color: #cbcbcb;
+      margin: 0.2rem 0.3rem;
+    }
+    .number0{
+      justify-content: center;
+      width: 1.37rem;
+      height: 1.12rem;
+      margin: 0.01rem 0 0.01rem 6.2rem;
+      padding: 0.01rem 0.01rem;
+      border-radius: 1.1rem;
+      color: white;
+      background-color: #cbcbcb;
+      display: flex;
+      align-items: center;
+    }
+  
+    .Your-Approvals {
+      
+      
+      font-size: 0.68rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #e20074;
+    }
+    .Approve{
+      margin-left: 1.5rem;
+    }
+    .You-dont-have-any-a {
+      width: 11rem;
+      
+      opacity: 0.4;
+      
+      font-size: 0.68rem;
+      line-height: 2.42;
+      color: #000;
+    }
+    .Allgroupsheading{
+      align-items: center;
+        display: flex;
+      height: 3rem;
+      box-shadow: inset 0 -1px 0 0 #e9e9e9;
+      
+    }
+    .ALL-GROUPS {
+      width: 100%;
+      height: 0.8rem;
+      
+      font-size: 0.75rem;
+      font-weight: bold;
+      
+      letter-spacing: 2px;
+     
+      color: #ea168b;
+    }
+    
+    .recommended-GROUPS {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      
+      font-size: 0.625rem;
+      font-weight: bold;
+      
+      letter-spacing: 1.67px;
+     
+      color: #676767;
+    }
+    .recommended-GROUPS .text-style-1 {
+      letter-spacing: 1.85px;
+    }
+    .mainbody{
+      display: flex;
+      height: calc(100vh - 4rem);
+    }
+    .subhead{
+      display: flex;
+    }
+    .arrows{
+      display: flex;
+      margin-right: 1rem;
+    }
+    .catagories{
+      display: flex;
+      overflow: auto;
+      
+    }
+    .catagories::-webkit-scrollbar{
+      display: none;
+    }
+  
+    .catagoriesbox{
+      display: flex;
+      align-items: center;
+      padding: 0.2rem 0.7rem;
+      margin: 0.5rem 0.2rem;
+      border-radius: 4px;
+      box-shadow: 0 0.06rem 0.3rem 0 rgb(126 142 177 / 30%);
+      background-color: #fff;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      height: 3rem;
+    }
+    .company{
+      
+      font-size: 0.68rem;
+      margin-bottom: 0.2rem;
+      font-weight: 500;
+      color: #4a4a4a;
+      width: 7rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .nameof{
+    opacity: 0.5;
+      font-size: 0.62rem;
+      color: #4a4a4a;
+      width: 6.5rem;
+      overflow: hidden;
+    }
+    .textinbox{
+      margin: 0.2rem 0.5rem;
+      padding: 0.1rem 0.1rem;
+      width: 100%;
+    }
+  
+    .content{
+      padding: 0 1.25rem;
+      background-color: #f3f6f9;
+      width: calc(100% - 13.5rem);
+      
+    }
+      
+   
+    .tableright{
+      display: flex;
+    }
+    .search{
+      width: 12.5rem;
+    height: 1.87rem;
+    margin-right: 0.62rem;
+    border-radius: 0.18rem;
+    border: solid 0.06rem #dee3e6;
+    background-color: #fff;
+    }
+    .searchb{
+      width: 6.52rem;
+    height: 1.87rem;
+    margin-right: 0.6rem;
+    border-radius: 0.18rem;
+    border-style: hidden;
+    color: white;
+    background-color: #ea168b;
+    }
+    .maintable{
+      width: 100%;
+      text-align: left;
+    }
+    .tablehead{
+      box-shadow: 0 -1px 0 0 #dfe3e7, inset 0 -1px 0 0 #dee3e6;
+    background-color: #f8fafb;
+    }
+    .headcheck{
+      display: flex;
+    }
+    .checkbox{
+      
+    margin: 0 1rem 0 0;
+   
+    border: solid 1px #c3c7ca;
+    background-color: #fff;
+    }
+    .checkbox_default{  
+      width: 0.8rem;  
+      height: 0.8rem; 
+       border: solid 1px #c3c7ca; 
+        background-color: #fff;
+      }
+  .maininfo{
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem 2rem 1.2rem;
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+  .abovetable{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+  }
+  .abovetableright{
+    display: flex;
+  }
+  .allgroup{
+    width: 100%;
+      height: 0.8rem;
+      
+      font-size: 0.68rem;
+      font-weight: bold;
+      
+      letter-spacing: 2px;
+     
+      color: #ea168b;
+  }
+  .searchandmagnify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .inputt{
+    display: flex;
+    position:relative;
+  }
+  .iconin{
+    position: absolute;
+      bottom: 0.3rem;
+      left: 0.4rem;
+  }
+  .inputText {
+  
+    background-color: #fff;
+    border-radius: 5px;
+    height: 1.9rem;
+   
+    text-align: left;
+    font-size: 0.8rem;
+    border: solid 1px #dee3e6;
+    margin-right: 0.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .inputText:hover {
+    border: 1px solid #e20074;
+    transition: ease-out 0.2s;
+    cursor: pointer;
+  
+  }
+  .newGroup {
+    text-align: center;
+    color: #e20074;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px;
+    height: 1.75rem;
+    width: 9rem;
+    font-size: 0.75rem;
+    border: solid 1px #e20074;
+  }
+  .newGroup:hover {
+    color: white;
+    background: #e20074;
+    transition: ease 0.2s;
+    cursor: pointer;
+  
+  }
+  .newGroup:hover .addtext{
+    color: white;
+    cursor: pointer;
+  }
+  .addtext{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ea168b;
+    word-spacing: 2px;
+  
+    
+  }
+ 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+ 
+  thead,
+  tbody,
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;  
+  }
+  thead {
+    border-top: solid 1px #e8e9eb;
+  }
+  
+  tr:not(:last-child) {
+    border-bottom: solid 1px #e8e9eb;
+  }
+  
+  tbody {
+    display: block;
+    height: 20rem;
+    overflow: scroll;
+    border-bottom: solid 1px #e8e9eb;
+    border-top: solid 1px #e8e9eb;
+  }
+  
+  
+  
+  tbody::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  
+  .checkbox {
+    border-color: #f2f4f8;
+    margin-left: 0.2rem;
+    vertical-align: middle;
+  }
+  
+  .checkbox:hover {
+    cursor: pointer;
+  
+  }
+  
+  
+  
+  .checkboxGroupNameWidth {
+    display: flex;
+    align-items: center;
+  }
+  
+  .subCheckbox {
+    vertical-align: top;
+  }
+  
+  
+  .groupNameLink {
+    position: relative;
+    color: #e20074;
+    padding-left: 0.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .imageText {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  th {
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+  
+  .actions {
+    padding-right: 3rem;
+    text-align: right;
+  }
+  
+  th,
+  td {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+  }
+  
+  tbody,
+  tr {
+    background-color: #fff;
+  }
+  
+  .joinBtn {
+    color: #e20074;
+    height: 1.4rem;
+    width: 4rem;
+    font-size: 0.66rem;
+    border-radius: 3px;
+    border: solid 1px #ea168b;
+    background-color: #fff;
+    
+    font-weight: 500;
+    text-align: center;
+  }
+  .joinBtn:hover {
+    background: #e20074;
+    color: white;
+    transition: ease 0.2s;
+    cursor: pointer;
+    font-weight: 100;
+  }
+  
+  thead tr:first-child {
+    background-color: #f2f4f8;
+  }
+  
+  .userIcon {
+    width: 0.8rem;
+    height: 0.75rem;
+    margin-right: 0.2rem;
+    margin-right: 0.3rem;
+  }
+  
+  a {
+    color: #4a4a4a;
+  }
+  .groupOwnerHid,
+  .createdDateHid {
+    text-align: center;
+  }
+  .bottomcontent{
+    margin-top: 1rem;
+    display: flex;
+      justify-content: end;
+      
+      align-items: center;
+  }
+  .bottomtext{
+    
+      color: #676767;
+      font-size: 0.66rem;
+  }
+  .goto{
+    
+    color: #676767;
+    font-size: 0.66rem;
+    margin-left: 0.6rem;
+  }
+  .gotoinput{
+    width: 1.5rem;
+    border: solid 1px #979797;
+    background-color: #fff;
+    margin-left: 0.5rem;
+  }
+  .jumppage{
+    display: flex;
+    align-items: center;
+  }
+  .Arrow_back{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .number123{
+    color: #676767;
+      font-size: 0.66rem;
+  }
+  .text{
+    width: 100%;
+    border-style: none;
+  }
+  .number123:hover{
+    color: #e20074;
+    cursor: pointer;
+  }
+  .allgroups{
+    width: 13.75rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+  .grptext{
+    margin-left: 1rem;
+    font-size: 0.75rem;
+      font-weight: bold;
+      line-height: 2.23;
+      color: #46475c;
+    letter-spacing: 0.5px;
+   
+  }
+  .grpicon{
+    height: 1rem;
+    display: flex;
+  }
+  .allgroups:hover{
+    background-color: #e20074;
+    cursor: pointer;
+  }
+  .allgroups:hover .grptext{
+    color: white;
+    cursor: pointer;
+  }
+  .allpacks{
+    width: 13.75rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    
+  
+  }
+  .allpacks:hover{
+    cursor: pointer;
+    background-color: #e20074;
+  }
+  .allpacks:hover .grptext{
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media only screen and (min-width: 2500px){
+    html{
+      font-size: 35px !important; 
+    }
+   .icon{
+    display: flex;
+    height: 1.2rem;
+   }
+   .addpack{
+    display: flex;
+    height: 1.2rem;
+   }
+   .imageText{
+    height: 1.2rem;
+   }
+   .groupLogotable{
+       height: 1.2rem;
+
+   }
+   .cloud{
+       font-size: 0.8rem;
+   }
+   .ACCESS{
+       font-size: 0.8rem;
+   }
+  }
+  @media only screen and (min-width : 2000px){
+    html{
+      font-size: 24px;
+    }
+   .icon{
+    
+    height: 1rem;
+   }
+   .addpack{
+    display: flex;
+    height: 1rem;
+   }
+   .imageText{
+    height: 1rem;
+   }
+  }
+  .groupLogotable{
+      display: flex;
+      height: 1rem;
+  }
+  
+  @media only screen and (min-width: 1140px) {
+    .abovetable{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media only screen and (min-height: 666px) {
+    tbody{
+        height: 15rem;
+    }
+  }
+  @media only screen and (min-height: 420px) {
+    .header{
+        padding: 0.5rem 1.7rem 0.5rem 1.2rem;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .abovetable{
+      width: 100%;
+      height: 100%;
+    }
+    .groupNameLink{
+        width: 10rem;
+        
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+  html{
+    font-size: 16px;
+  }
+    
+    .mainbody{
+      width: calc( 100% - 13.5rem);
+      height: 100%;
+    }
+    .abovetableright{
+      align-items: center;
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+    }
+    .inputText{
+      width: 7rem;
+      font-size: 0.7rem;
+      padding-bottom: 0.1rem;
+    }
+    .newGroup{
+      width: 5rem;
+     
+      padding-left: 0.5rem;
+    }
+    .addtext{
+      display: flex;
+      word-spacing: 1px;
+      font-size: 0.6rem;
+    }
+    .maintable{
+      width: 100%;
+      height: 100%;
+      
+    }
+    .groupNameLink{
+      width: 5rem;
+     
+    }
+    .createdDateHid{
+      display: none;
+    }
+    .iconin{
+      display: flex;
+      top: 0.4rem;
+      height:50% ;
+    }
+  }
+  
+  @media only screen and (max-width: 430px) {
+  
+    .logo{
+      display: none;
+    }
+    .Shape{
+      display: none;
+    }
+    .abovetable{
+      width: 100%;
+      height: 100%;
+    }
+    .mainbody{
+      width: 100%;
+  
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+    }
+    
+    .newGroup{
+      width: 5rem;
+    }
+    
+    .addtext{
+      display: flex;
+      font-size: 0.5rem;
+      padding-left: 4px;
+      font-weight: bold;
+    }
+    .abovetable{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .allgroup{
+      margin-bottom: 0.5rem;
+    }
+  
+    .maintable{
+      width: 100%;
+      height: 100%;
+      overflow-y: hidden;
+    }
+    tbody{
+      overflow-y: hidden;
+    }
+    .sidebar{
+      display: none;
+    }
+   
+    thead{
+      overflow-y: hidden;
+    }
+    .groupNameLink{
+      width: 8rem;
+    }
+   .groupOwnerHid{
+     display: none;
+   }
+   .createdDateHid{
+     display: none;
+   }
+   .bottomcontent{
+     display: flex;
+     
+   }
+   .bottomtext{
+     display: none;
+   }
+   .goto{
+     display: none;
+   }
+   .gotoinput{
+     display: none;
+   }
+   
+  
+  }
+  @media only screen and (max-width: 382px) {
+    
+    .cloud{
+      font-size: 0.687rem;
+    }
+    .ACCESS{
+      font-size: 0.687rem;
+    }
+    .abovetable{
+      width: 100%;
+      height: 100%;
+    }
+    .mainbody{
+      width: 100%;
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+    }
+    .inputt{
+      width: 8rem;
+    }
+    .inputText{
+      width: 100%;
+      padding-left: 1.7rem;
+      font-size: 11px;
+    }
+    .newGroup{
+      width: 5rem;
+     
+      
+    }
+    .addtext{
+      
+      font-size: 9px;
+      width: 100%;
+      font-weight: bold;
+    }
+    .maintable{
+      width: 100%;
+      height: 100%;
+      overflow-y: hidden;
+    }
+    tbody{
+      overflow-y: hidden;
+    }
+    .sidebar{
+      display: none;
+    }
+    .iconin{
+      display: flex;
+      top: 0.3rem;
+      height: 50%
+    }
+    thead{
+      overflow-y: hidden;
+    }
+    .checkbox{
+      display: none;
+    }
+    .checkboxGroupNameWidth{
+      justify-content: space-around;
+  
+    }
+    .actions{
+      padding-right: 1rem;
+    }
+   .groupOwnerHid{
+     display: none;
+   }
+   .groupNameLink{
+     width: 5rem;
+   }
+   .createdDateHid{
+     display: none;
+   }
+   .bottomcontent{
+     display: flex;
+     
+   }
+   .bottomtext{
+     display: none;
+   }
+   .goto{
+     display: none;
+   }
+   .gotoinput{
+     display: none;
+   }
+   .name{
+     font-size: 0.75rem;
+   }
+   .TMobiles{
+     font-size: 0.4rem;
+   }
+  
+  }
+  
+  /* Final End After Changes applied finnaly*/
