@@ -1,983 +1,1172 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    box-sizing: border-box;
-  }
-  :focus {
-    outline: 0;
-  }
-  .wrapper{
-    width: 100%;
-    height: 100%;
-  }
-  body{
-    font-family: Roboto, sans-serif;
-    background-color: #f3f6f9;
-    width: 100%;
-    height: 100vh;
-  }
-  .cloud{
-    color: #e20074;
-    font-size: 1.2rem;
-  }
-  .ACCESS {
-     color: #3e3e3e;
-     margin-left: 0.2rem;
-     font-size: 1.2rem;
-    }
-    .Shape {
-      
-      margin-right: 0.5rem
-      
-      }
-    
-  .header{
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem 1.7rem 0.5rem 2rem;
-      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-      position: sticky;
-  }
-  .leftc{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+
+:focus {
+  outline: 0;
+}
+
+
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html {
+  height: 100vh;
+  font-size: 16px;
+}
+
+body {
+  background-color: #f2f4f8;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px 0 rgba(37, 37, 37, 0.1);
+  align-items: center;
+  height: 3.5rem;
+  padding: 0.5rem 0;
+  background-color: #ffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.leftHead {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+
+
+#toggleNavbar {
+  display: none;
+}
+
+
+.rightHead {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.logo {
   
-  }
-  .rightc{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  .user{
-    align-items: revert;
-      width: 4rem;
-      display: flex;
-      flex-direction: column;
-      margin-right: 0.1rem;
-  }
-  .name{
-    margin: 0 0 2px;
-    width: 6rem;
-    font-size: 0.8rem;
-    color: #252a31;
-  }
-  .TMobiles{
-      
-      justify-content: center;
-    opacity: 0.5;
-    
-    font-size: 0.5rem;
-    font-weight: bold;
-    
-    text-align: right;
-    color: #252a31;
+  height: 1.7rem;
+  flex-grow: 0;
+  margin-right: 0.5rem;
+}
+
+.cTag {
+  color: #e20074;
+}
+
+.logoText {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0.2rem;
+}
+
+.notifyBell,
+.userPhoto {
+  width: 2rem;
+  height: 2rem;
+}
+
+.userName {
+  font-size: 1rem;
+  margin: 0.1rem 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.userProject {
+  font-size: 0.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #77797c;
+  font-weight: bold;
+}
+
+
+
+aside {
+  width: 13.5rem;
+  height: 100%;
+  position: fixed;
+  background-color: #ffff;
+  margin-top: -18px;
+  padding-top: 0.7rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  width: 90%;
+  border: solid 1px #f2f4f8;
+}
+
+.side-1,
+.side-2,
+.side-3,
+.side-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.7rem 0.6rem 0.7rem 1.5rem;
   
-  }
-  .sidebar{
-      display: flex;
-      flex-direction: column;
-      width: 13.5rem;
-      padding-top: 1.8rem;
-      background-color: #fff;
-      
-  }
-  .groups{
-    margin: 0 4rem 0.6rem 1.5rem;
-    
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 0.03rem;
-    text-align: left;
-    color: #e20074;
-  
-  }
-  .Line-11 {
-      width: 12.5rem;
-      height: 0.06rem;
-      margin: 1.5rem 0.6rem 1.5rem;
-      border: solid 1px #f2f4f8;
-    }
-    .Line-12 {
-      width: 12.5rem;
-      height: 0.06rem;
-      margin: 1.5rem 0.6rem 0;
-      border: solid 1px #f2f4f8;
-    }
-    
-  .You-dont-have-acces {
-      padding: 0 1.5rem;
-      opacity: 0.4; 
-      font-size: 0.75rem;
-      text-align: left;
-      color: #000;
-    }
-    .Your-Requests {
-      padding: 0 6.5rem 0.5rem 1.5rem;
-      margin-top: 0.6rem;
-      font-size: 0.68rem;
-      font-weight: bold;
-      
-      letter-spacing: 0.5px;
-      text-align: left;
-      color: #e20074;
-    }
-    .Pending {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0.2rem 0.2rem;
-     width: 100%;
-      
-      font-size: 0.75rem;
-      font-weight: bold;
-      line-height: 2.23;
-      color: #cbcbcb;
-      
-    }
-    .Rectangle-Copy {
-     
-      display: flex;
-      margin: 0.11rem 0 0;
-      padding: 0.18rem 0.6rem 0.18rem 1.5rem;
-      background-color: #fff;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .Pending:hover .number0{
-      cursor: pointer;
-      background-color: #ea168b;
-    }
-    .Pending:hover {
-      cursor: pointer;
-      color: black;
-    }
-    .number{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 1.37rem;
-      height: 1.12rem;
-      margin: 0.01rem 0 0.01rem 6.5rem;
-      padding: 0.01rem 0.01rem;
-      border-radius: 12px;
-      background-color: #ea168b;
-      color: white;
-    }
-    .Approved {
-      display: flex;
-      margin: 0.2rem 0.2rem;
-      
-      font-size: 0.8rem;
-      font-weight: bold;
-      line-height: 2.23;
-      color: #cbcbcb;
-    }
-    .Rejected{
-      display: flex;
-      
-      font-size: 0.8rem;
-      font-weight: bold;
-      line-height: 2.23;
-      color: #cbcbcb;
-      margin: 0.2rem 0.3rem;
-    }
-    .number0{
-      justify-content: center;
-      width: 1.37rem;
-      height: 1.12rem;
-      margin: 0.01rem 0 0.01rem 6.2rem;
-      padding: 0.01rem 0.01rem;
-      border-radius: 1.1rem;
-      color: white;
-      background-color: #cbcbcb;
-      display: flex;
-      align-items: center;
-    }
-  
-    .Your-Approvals {
-      
-      
-      font-size: 0.68rem;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      color: #e20074;
-    }
-    .Approve{
-      margin-left: 1.5rem;
-    }
-    .You-dont-have-any-a {
-      width: 11rem;
-      
-      opacity: 0.4;
-      
-      font-size: 0.68rem;
-      line-height: 2.42;
-      color: #000;
-    }
-    .Allgroupsheading{
-      align-items: center;
-        display: flex;
-      height: 3rem;
-      box-shadow: inset 0 -1px 0 0 #e9e9e9;
-      
-    }
-    .ALL-GROUPS {
-      width: 100%;
-      height: 0.8rem;
-      
-      font-size: 0.75rem;
-      font-weight: bold;
-      
-      letter-spacing: 2px;
-     
-      color: #ea168b;
-    }
-    
-    .recommended-GROUPS {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 1rem;
-      
-      font-size: 0.625rem;
-      font-weight: bold;
-      
-      letter-spacing: 1.67px;
-     
-      color: #676767;
-    }
-    .recommended-GROUPS .text-style-1 {
-      letter-spacing: 1.85px;
-    }
-    .mainbody{
-      display: flex;
-      height: calc(100vh - 4rem);
-    }
-    .subhead{
-      display: flex;
-    }
-    .arrows{
-      display: flex;
-      margin-right: 1rem;
-    }
-    .catagories{
-      display: flex;
-      overflow: auto;
-      
-    }
-    .catagories::-webkit-scrollbar{
-      display: none;
-    }
-  
-    .catagoriesbox{
-      display: flex;
-      align-items: center;
-      padding: 0.2rem 0.7rem;
-      margin: 0.5rem 0.2rem;
-      border-radius: 4px;
-      box-shadow: 0 0.06rem 0.3rem 0 rgb(126 142 177 / 30%);
-      background-color: #fff;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      height: 3rem;
-    }
-    .company{
-      
-      font-size: 0.68rem;
-      margin-bottom: 0.2rem;
-      font-weight: 500;
-      color: #4a4a4a;
-      width: 7rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .nameof{
-    opacity: 0.5;
-      font-size: 0.62rem;
-      color: #4a4a4a;
-      width: 6.5rem;
-      overflow: hidden;
-    }
-    .textinbox{
-      margin: 0.2rem 0.5rem;
-      padding: 0.1rem 0.1rem;
-      width: 100%;
-    }
-  
-    .content{
-      padding: 0 1.25rem;
-      background-color: #f3f6f9;
-      width: calc(100% - 13.5rem);
-      
-    }
-      
-   
-    .tableright{
-      display: flex;
-    }
-    .search{
-      width: 12.5rem;
-    height: 1.87rem;
-    margin-right: 0.62rem;
-    border-radius: 0.18rem;
-    border: solid 0.06rem #dee3e6;
-    background-color: #fff;
-    }
-    .searchb{
-      width: 6.52rem;
-    height: 1.87rem;
-    margin-right: 0.6rem;
-    border-radius: 0.18rem;
-    border-style: hidden;
-    color: white;
-    background-color: #ea168b;
-    }
-    .maintable{
-      width: 100%;
-      text-align: left;
-    }
-    .tablehead{
-      box-shadow: 0 -1px 0 0 #dfe3e7, inset 0 -1px 0 0 #dee3e6;
-    background-color: #f8fafb;
-    }
-    .headcheck{
-      display: flex;
-    }
-    .checkbox{
-      
-    margin: 0 1rem 0 0;
-   
-    border: solid 1px #c3c7ca;
-    background-color: #fff;
-    }
-    .checkbox_default{  
-      width: 0.8rem;  
-      height: 0.8rem; 
-       border: solid 1px #c3c7ca; 
-        background-color: #fff;
-      }
-  .maininfo{
-    margin-top: 1rem;
-    padding: 0.5rem 1.2rem 2rem 1.2rem;
-    background-color: #ffffff;
-    border-radius: 4px;
-  }
-  .abovetable{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.75rem;
-    margin-top: 1rem;
-  }
-  .abovetableright{
-    display: flex;
-  }
-  .allgroup{
-    width: 100%;
-      height: 0.8rem;
-      
-      font-size: 0.68rem;
-      font-weight: bold;
-      
-      letter-spacing: 2px;
-     
-      color: #ea168b;
-  }
-  .searchandmagnify{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .inputt{
-    display: flex;
-    position:relative;
-  }
-  .iconin{
-    position: absolute;
-      bottom: 0.3rem;
-      left: 0.4rem;
-  }
-  .inputText {
-  
-    background-color: #fff;
-    border-radius: 5px;
-    height: 1.9rem;
-   
-    text-align: left;
-    font-size: 0.8rem;
-    border: solid 1px #dee3e6;
-    margin-right: 0.5rem;
-    padding-left: 1.5rem;
-  }
-  
-  .inputText:hover {
-    border: 1px solid #e20074;
-    transition: ease-out 0.2s;
-    cursor: pointer;
-  
-  }
-  .newGroup {
-    text-align: center;
-    color: #e20074;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px;
-    height: 1.75rem;
-    width: 9rem;
-    font-size: 0.75rem;
-    border: solid 1px #e20074;
-  }
-  .newGroup:hover {
-    color: white;
-    background: #e20074;
-    transition: ease 0.2s;
-    cursor: pointer;
-  
-  }
-  .newGroup:hover .addtext{
-    color: white;
-    cursor: pointer;
-  }
-  .addtext{
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: #ea168b;
-    word-spacing: 2px;
-  
-    
-  }
- 
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    height: calc(100vh - 30rem);
-  }
- 
-  thead,
-  tbody,
-  tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;  
-  }
-  thead {
-    border-top: solid 1px #e8e9eb;
-  }
-  
-  tr:not(:last-child) {
-    border-bottom: solid 1px #e8e9eb;
-  }
-  
-  tbody {
-    display: block;
-    height: calc(100vh - 28rem);
-    overflow: scroll;
-    border-bottom: solid 1px #e8e9eb;
-    border-top: solid 1px #e8e9eb;
-  }
-  
-  
-  
-  tbody::-webkit-scrollbar {
-    display: none;
-  }
-  
-  
-  
-  .checkbox {
-    border-color: #f2f4f8;
-    margin-left: 0.2rem;
-    vertical-align: middle;
-  }
-  
-  .checkbox:hover {
-    cursor: pointer;
-  
-  }
-  
-  
-  
+}
+
+.sub1,
+.detailType {
+  font-size: 0.7rem;
+  text-align: left;
+  color: #e20074;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.detailType {
+  color: black;
+}
+
+.side-4 {
+  padding: 0;
+}
+
+.allDetail {
+  width: 100%;
+  height: 2.2rem;
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+}
+
+
+
+.allDetail:hover {
+  background: #ea168b;
+  transition: ease-out 0.2s;
+  cursor: pointer;
+}
+
+.allDetail:hover .detailType {
+  color: white;
+  transition: ease-out 0.2s;
+}
+
+.allDetailLogo {
+  padding-left: 1.5rem;
+  padding-right: 0.7rem;
+  height: 1rem;
+}
+
+.sub2,
+.request {
+  color: #b8b8b8;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.request {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  align-items: center;
+}
+
+.requests {
+  width: 100%;
+}
+
+.requestType {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.sub1 {
+  margin: 0.2rem 0;
+  font-weight: 700;
+}
+
+.sub2 {
+  margin: 0.5rem 0;
+}
+
+.sideSub3 {
+  width: 100%;
+}
+
+.requestCount {
+  border-radius: 50%;
+  background-color: #cbcbcb;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  padding: 0.1rem;
+}
+
+
+
+.request:hover .requestType {
+  color: black;
+  transition: ease-out 0.3s;
+}
+
+.request:hover .requestCount {
+  background-color: #ea168b;
+}
+
+
+
+section {
+  margin: 4rem 2rem 0 15rem;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f4f8;
+  overflow: hidden;
+
+}
+
+.allGroups {
+  color: #ea168b;
+  font-weight: bold;
+  letter-spacing: 0.01rem;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  height: 2rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.top {
+  background-color: #f3f6f9;
+  box-shadow: inset 0 -1px 0 0 #e9e9e9;
+}
+
+.recommedNextPage {
+  background-color: #f2f4f8;
+  color: #676767;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.topButtons {
+  font-size: 1rem;
+}
+
+.btn {
+  border-radius: 50%;
+  background-color: #dfe3e7;
+  color: #9b9b9b;
+  border: 0px solid;
+}
+
+.btn:hover {
+  background: #e20074;
+  cursor: pointer;
+  color: white;
+  transition: ease-out 0.2s;
+}
+
+.selectGroups {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f2f4f8;
+}
+
+.group {
+  display: flex;
+  height: 3.6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 0 rgba(126, 142, 177, 0.3);
+  background-color: #fff;
+  margin-right: 0.5rem;
+  width: 12rem;
+}
+
+.groupMentorName {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  opacity: 0.7;
+}
+
+.groupLogo {
+  color: #e20074;
+  margin: 0 0.5rem;
+  height: 1.6rem;
+}
+
+.groupName,
+.mentorName {
+  white-space: nowrap;
+  width: 7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.groupName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.mentorName {
+  font-size: 0.6rem;
+  color: #4a4a4a;
+}
+
+.addSign {
+  border: 5px #e20074;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  height: 1.3rem;
+}
+
+.addSign:hover {
+  cursor: pointer;
+}
+
+.tableTop {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  margin-top: 1rem;
+}
+
+.tableOutlet {
+  margin: 1rem 0;
+  padding: 0.5rem 1.2rem 2rem 1.2rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.newGroup {
+  text-align: center;
+  color: #e20074;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px;
+  height: 2rem;
+  width: 7rem;
+  font-size: 0.8rem;
+  border: solid 1px #e20074;
+}
+
+/* hover on add new group  */
+
+.newGroup:hover {
+  color: white;
+  background: #e20074;
+  transition: ease 0.2s;
+}
+
+.groupOwnerHid,
+.createdDateHid {
+  text-align: left;
+  padding-left: 3.4rem;
+}
+
+
+
+.rightTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+::placeholder {
+  color: #4a4a4a;
+  opacity: 0.5;
+}
+
+.bx {
+  position: absolute;
+  left: 2px;
+  opacity: 0.5;
+  padding-left: 0.2rem;
+}
+
+
+
+.inputGroup {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 1.9rem;
+  width: 13rem;
+  text-align: left;
+  font-size: 0.8rem;
+  border: solid 1px #dee3e6;
+  margin-right: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.inputGroup:hover {
+  border: 1px solid #e20074;
+  transition: ease-out 0.2s;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  color: #2a2a2a;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #4a4a4a;
+}
+
+thead,
+tr,
+.checkbox {
+  background-color: rgb(230, 230, 230);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: solid black;
+}
+
+
+thead,
+tbody,
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+thead {
+  border-top: solid 1px #e8e9eb;
+}
+
+tr:not(:last-child) {
+  border-bottom: solid 1px #e8e9eb;
+}
+
+tbody {
+  display: block;
+  height: 20rem;
+
+  overflow: scroll;
+  border-bottom: solid 1px #e8e9eb;
+  border-top: solid 1px #e8e9eb;
+}
+
+
+
+tbody {
+  overflow-x: hidden;
+}
+
+tbody::-webkit-scrollbar {
+  width: 2px;
+  background: #dee3e6;
+}
+tbody::-webkit-scrollbar-thumb {
+  background: #bebebe;
+}
+
+
+.checkbox {
+  border-color: #f2f4f8;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+
+.checkboxGroupNameWidth {
+  vertical-align: baseline;
+  display: flex;
+  align-items: center;
+}
+
+.subCheckbox {
+  vertical-align: top;
+}
+.sort {
+  margin-left: auto;
+}
+
+.sort:hover {
+  cursor: pointer;
+  border: solid 1px #e20074;
+  transition: all 0.3s ease;
+}
+
+
+
+.groupNameLink {
+  color: #e20074;
+  padding-left: 0.4rem;
+}
+
+.imageText {
+  display: inline-flex;
+  align-items: center;
+}
+
+th {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.actions {
+  padding-left: 5.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+th,
+td {
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+tbody,
+tr {
+  background-color: #fff;
+}
+
+.joinBtn {
+  color: #e20074;
+  height: 1.4rem;
+  width: 4rem;
+  font-size: 0.66rem;
+  border-radius: 3px;
+  border: solid 1px #ea168b;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.joinBtn:hover {
+  background: #e20074;
+  color: white;
+  transition: ease 0.2s;
+  cursor: pointer;
+  font-weight: 100;
+  transition: all 0.3s ease;
+}
+
+thead tr:first-child {
+  background-color: #f2f4f8;
+}
+
+.userIcon {
+  width: 0.8rem;
+  height: 0.7rem;
+  margin-right: 0.2rem;
+  margin-right: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: #4a4a4a;
+}
+
+.bottomOptions {
+  text-align: left;
+  color: #676767;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+#tableList {
+  flex-direction: row-reverse;
+}
+
+.showing {
+  padding-right: 0.5rem;
+  border-right: 1px solid #979797;
+  transition: all 0.3s ease;
+}
+
+.goto {
+  padding: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.gotoInput {
+  border: solid 1px #979797;
+  background-color: #fff;
+  width: 1.5rem;
+}
+
+.pageNumbers {
+  margin: 0 0.5rem;
+  border-left: 1px solid #979797;
+  transition: all 0.3s ease;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  padding: 0 0.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 0.2rem;
+}
+
+ul li.list {
+  text-align: center;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+}
+
+ul li.list:hover a {
+  color: #e20074;
+}
+
+.active {
+  color: #e20074;
+  font-weight: 600;
+}
+
+.allPageNo {
+  padding: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.pageNumbersBtn {
+  width: 1.2rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.selectGroups {
+  overflow-x: scroll;
+}
+
+.selectGroups::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 1431px) {
   .checkboxGroupNameWidth {
     display: flex;
-    align-items: center;
   }
   
-  .subCheckbox {
-    vertical-align: top;
-  }
-  
-  
+}
+
+@media only screen and (max-width: 1364px) {
   .groupNameLink {
-    position: relative;
-    color: #e20074;
-    padding-left: 0.4rem;
+    width: 9rem;
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
   }
-  
-  .imageText {
-    display: inline-flex;
-    align-items: center;
+}
+
+@media only screen and (max-width: 1120px) {
+  .selectGroups {
+    overflow: auto;
+    justify-content: space-between;
+    transition: all 0.3s ease;
   }
-  
-  th {
-    font-weight: bold;
-    font-size: 0.75rem;
+
+  .inputGroup {
+    width: 8rem;
+    text-align: left;
+    transition: all 0.3s ease;
   }
-  
-  .actions {
-    padding-right: 3rem;
-    text-align: right;
+
+  .bottomOptions {
+    font-size: 0.6rem;
+    transition: all 0.3s ease;
   }
-  
-  th,
-  td {
-    padding: 0.5rem 0;
-    font-size: 0.75rem;
+
+  tbody {
+    height: 16.5rem;
+    transition: all 0.3s ease;
   }
-  
-  tbody,
-  tr {
-    background-color: #fff;
+
+  .tableOutlet {
+    padding-bottom: 1rem;
+    transition: all 0.3s ease;
   }
-  
-  .joinBtn {
+}
+
+@media only screen and (max-width: 901px) and (orientation: landscape){
+  #toggleNavbar{
+    display: block;
+  }
+
+  aside{
+    overflow: auto;
+    transform: translate(-200%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .side-4{
+    margin-bottom: 4rem;
+    }
+
+  .fa-bars {
     color: #e20074;
-    height: 1.4rem;
-    width: 4rem;
-    font-size: 0.66rem;
-    border-radius: 3px;
-    border: solid 1px #ea168b;
-    background-color: #fff;
-    
-    font-weight: 500;
-    text-align: center;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    transition: all 0.3s ease;
   }
-  .joinBtn:hover {
-    background: #e20074;
-    color: white;
-    transition: ease 0.2s;
-    cursor: pointer;
-    font-weight: 100;
+
+  section {
+    margin-left: 30%;
   }
+  .navbarclose {
+    transform: translate(1%);
+    z-index: 1;
+    width: 14rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
   
-  thead tr:first-child {
-    background-color: #f2f4f8;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .groupOwnerHid {
+    display: none;
   }
-  
-  .userIcon {
-    width: 0.8rem;
-    height: 0.75rem;
-    margin-right: 0.2rem;
-    margin-right: 0.3rem;
-  }
-  
-  a {
-    color: #4a4a4a;
-  }
-  .groupOwnerHid,
+
   .createdDateHid {
+    display: none;
+  }
+
+  .actions {
+    padding-right: 0.5rem;
+    text-align: right;
+    transition: all 0.3s ease;
+  }
+
+  .inputGroup {
+    text-align: left;
+    width: 8rem;
+    height: 1.5rem;
+    font-size: 0.6rem;
+    transition: all 0.3s ease;
+  }
+  .newGroup {
+    height: 1.5rem;
+    width: 4.5rem;
+    font-size: 0.6rem;
     text-align: center;
+    transition: all 0.3s ease;
   }
-  .bottomcontent{
-    margin-top: 1rem;
+
+  aside {
+    width: 25%;
+  }
+
+  section {
+   
+    margin-left: 4%;
+  }
+ 
+  .sub2,
+  .request {
+    font-size: 0.7rem;
+  }
+
+
+
+  .groupName {
+    font-size: 0.7rem;
+  }
+
+  .checkboxGroupNameWidth {
     display: flex;
-      justify-content: end;
-      
-      align-items: center;
-  }
-  .bottomtext{
-    
-      color: #676767;
-      font-size: 0.66rem;
-  }
-  .goto{
-    
-    color: #676767;
-    font-size: 0.66rem;
-    margin-left: 0.6rem;
-  }
-  .gotoinput{
-    width: 1.5rem;
-    border: solid 1px #979797;
-    background-color: #fff;
-    margin-left: 0.5rem;
-  }
-  .jumppage{
-    display: flex;
+    justify-content: left;
     align-items: center;
+    transition: all 0.3s ease;
   }
-  .Arrow_back{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 641px) {
+  .rightHead {
+    display: flex;
   }
-  .number123{
-    color: #676767;
-      font-size: 0.66rem;
-  }
-  .text{
-    width: 100%;
-    border-style: none;
-  }
-  .number123:hover{
+
+  .fa-bars {
     color: #e20074;
-    cursor: pointer;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    transition: all 0.3s ease;
   }
-  .allgroups{
-    width: 13.75rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    padding-left: 1.5rem;
+  .side-1,
+  .side-2,
+  .side-3,
+  .side-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all 0.3s ease;
   }
-  .grptext{
-    margin-left: 1rem;
-    font-size: 0.75rem;
-      font-weight: bold;
-      line-height: 2.23;
-      color: #46475c;
-    letter-spacing: 0.5px;
-   
-  }
-  .grpicon{
-    height: 1rem;
-    display: flex;
-  }
-  .allgroups:hover{
-    background-color: #e20074;
-    cursor: pointer;
-  }
-  .allgroups:hover .grptext{
-    color: white;
-    cursor: pointer;
-  }
-  .allpacks{
-    width: 13.75rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    padding-left: 1.5rem;
-    
-  
-  }
-  .allpacks:hover{
-    cursor: pointer;
-    background-color: #e20074;
-  }
-  .allpacks:hover .grptext{
-    color: white;
-    cursor: pointer;
-  }
-  
-  @media only screen and (min-width: 2500px){
-    html{
-      font-size: 35px !important; 
-    }
-   .icon{
-    display: flex;
-    height: 1.2rem;
-   }
-   .addpack{
-    display: flex;
-    height: 1.2rem;
-   }
-   .imageText{
-    height: 1.2rem;
-   }
-   .groupLogotable{
-       height: 1.2rem;
 
-   }
-   .cloud{
-       font-size: 0.8rem;
-   }
-   .ACCESS{
-       font-size: 0.8rem;
-   }
+  .allDetailLogo {
+    padding-left: 0;
+    transition: all 0.3s ease;
   }
-  @media only screen and (min-width : 2000px){
-    html{
-      font-size: 24px;
-    }
-   .icon{
-    
+
+  .logo {
+    margin: 0;
+  }
+
+  .fa-bars:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  #toggleNavbar {
+    display: block;
+  }
+
+  aside {
+    transform: translate(-200%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbarclose {
+    transform: translate(1%);
+    z-index: 1;
+    width: 14rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .userInfo {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .userPhoto {
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  section {
+    margin: 4rem 2rem 2rem 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .group {
+    height: 2rem;
+    padding: 0.4rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .groupName,
+  .addGroup {
+    font-size: 0.6rem;
+    transition: all 0.3s ease;
+  }
+
+  .groupName {
+    margin-bottom: 0.1rem;
+    transition: all 0.3s ease;
+  }
+
+  .groupLogo {
+    padding: 0 0.3rem;
+    height: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .groupLogotable {
+    width: 1rem;
     height: 1rem;
-   }
-   .addpack{
+    flex-grow: 0;
+  }
+
+  .mentorName {
+    font-size: 0.45rem;
+    transition: all 0.3s ease;
+  }
+
+  .addGroup {
+    padding: 0 0.3rem;
+    margin: 0 0.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .checkbox {
+    height: 10px;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  header {
+    justify-content: center;
+  }
+
+  .rightTop {
     display: flex;
-    height: 1rem;
-   }
-   .imageText{
-    height: 1rem;
-   }
+    align-items: center;
+    transition: all 0.3s ease;
   }
+
+  .rightHead {
+    margin-right: 0.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .inputGroup {
+    width: 5rem;
+    font-size: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .newGroup {
+    width: 4rem;
+    margin-left: 0.2rem;
+    font-size: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .bottomOptions {
+    margin-right: 0;
+  }
+
+  .notifyBell {
+    margin-right: 0;
+  }
+
+  .joinBtn {
+    height: 1rem;
+    width: 2.5rem;
+    font-size: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .groupNameLink {
+    font-size: 0.6rem;
+    transition: all 0.3s ease;
+  }
+
+  .mentorName {
+    display: none;
+  }
+
+  .groupNameLink {
+    width: 100px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .bottomOptions {
+    font-size: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .fa-bars {
+    margin-right: 0.4rem;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .userName {
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+  }
+
+  .userProject {
+    font-size: 0.55rem;
+    transition: all 0.3s ease;
+  }
+
+  .userInfo {
+    margin: 0 0.15rem;
+    transition: all 0.3s ease;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logoText {
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+  }
+
+  .groupNameLink {
+    width: 100px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+
+  .bottom {
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+  }
+
+  .inputGroup {
+    width: 5rem;
+    transition: all 0.3s ease;
+  }
+
+  .newGroup {
+    margin: 0;
+  }
+
+  .bottomOptions {
+    font-size: 0.45rem;
+    transition: all 0.3s ease;
+  }
+
+  .checkboxGroupNameWidth {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .rightHead {
+    padding: 0;
+  }
+
+  .leftHead {
+    padding: 0;
+  }
+
+  section {
+    margin: 4rem 0.5rem 2rem 0.5rem;
+    transition: all 0.3s ease;
+  }
+}
+
+
+@media only screen and (max-width: 4000px) and (min-width: 1800px) {
+  html {
+    font-size: 32px;
+  }
+  .groupNameLink {
+    width: max-content;
+  }
+  tbody {
+    height: calc(100vh - 31rem);
+  }
+  .checkbox{
+    width: 0.7rem;
+}
   .groupLogotable{
-      display: flex;
-      height: 1rem;
+      width: 1.2rem;
   }
-  
-  @media only screen and (min-width: 1140px) {
-    .abovetable{
-      width: 100%;
-      height: 100%;
-    }
-  }
-  
-
-  @media only screen and (min-height: 420px) {
-    .header{
-        padding: 0.5rem 1.7rem 0.5rem 1.2rem;
-    }
-   
-  }
-  @media only screen and (min-width: 1024px) {
-    .abovetable{
-      width: 100%;
-      height: 100%;
-    }
-    .groupNameLink{
-        width: 10rem;
-        
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-  html{
-    font-size: 16px;
-  }
-    
-    .mainbody{
-      width: calc( 100% - 13.5rem);
-      height: 100%;
-    }
-    .abovetableright{
-      align-items: center;
-    }
-    .content{
-      width: 100%;
-      height: 100%;
-    }
-    .inputText{
-      width: 7rem;
-      font-size: 0.7rem;
-      padding-bottom: 0.1rem;
-    }
-    .newGroup{
-      width: 5rem;
-     
-      padding-left: 0.5rem;
-    }
-    .addtext{
-      display: flex;
-      word-spacing: 1px;
-      font-size: 0.6rem;
-    }
-    .maintable{
-      width: 100%;
-      height: 100%;
-      
-    }
-    .groupNameLink{
-      width: 5rem;
-     
-    }
-    .createdDateHid{
-      display: none;
-    }
-    .iconin{
-      display: flex;
-      top: 0.4rem;
-      height:50% ;
-    }
-  }
-  
-  @media only screen and (max-width: 585px) {
-  
-    .logo{
-      display: none;
-    }
-    .Shape{
-      display: none;
-    }
-    .abovetable{
-      width: 100%;
-      height: 100%;
-    }
-    .mainbody{
-      width: 100%;
-  
-    }
-    .content{
-      width: 100%;
-      height: 100%;
-    }
-    
-    .newGroup{
-      width: 5rem;
-    }
-    
-    .addtext{
-      display: flex;
-      font-size: 0.5rem;
-      padding-left: 4px;
-      font-weight: bold;
-    }
-    .abovetable{
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .allgroup{
-      margin-bottom: 0.5rem;
-    }
-  
-    .maintable{
-      width: 100%;
-      height: 100%;
-      overflow-y: hidden;
-    }
-    tbody{
-      overflow-y: scroll;
-    }
-    .sidebar{
-      display: none;
-    }
-   
-    thead{
-      overflow-y: hidden;
-    }
-    .groupNameLink{
-      width: 8rem;
-    }
-   .groupOwnerHid{
-     display: none;
-   }
-   .createdDateHid{
-     display: none;
-   }
-   .bottomcontent{
-     display: flex;
-     
-   }
-   .bottomtext{
-     display: none;
-   }
-   .goto{
-     display: none;
-   }
-   .gotoinput{
-     display: none;
-   }
-   
-  
-  }
-  @media only screen and (max-width: 382px) {
-    
-    .cloud{
-      font-size: 0.687rem;
-    }
-    .ACCESS{
-      font-size: 0.687rem;
-    }
-    .abovetable{
-      width: 100%;
-      height: 100%;
-    }
-    .mainbody{
-      width: 100%;
-    }
-    .content{
-      width: 100%;
-      height: 100%;
-    }
-    .inputt{
-      width: 8rem;
-    }
-    .inputText{
-      width: 100%;
-      padding-left: 1.7rem;
-      font-size: 11px;
-    }
-    .newGroup{
-      width: 5rem;
-     
-      
-    }
-    .addtext{
-      
-      font-size: 9px;
-      width: 100%;
-      font-weight: bold;
-    }
-    .maintable{
-      width: 100%;
-      height: 100%;
-      overflow-y: hidden;
-    }
-    tbody{
-      overflow-y: scroll;
-    }
-    .sidebar{
-      display: none;
-    }
-    .iconin{
-      display: flex;
-      top: 0.3rem;
-      height: 50%
-    }
-    thead{
-      overflow-y: hidden;
-    }
-    .checkbox{
-      display: none;
-    }
-    .checkboxGroupNameWidth{
-      justify-content: space-around;
-  
-    }
-    .actions{
-      padding-right: 1rem;
-    }
-   .groupOwnerHid{
-     display: none;
-   }
-   .groupNameLink{
-     width: 5rem;
-   }
-   .createdDateHid{
-     display: none;
-   }
-   .bottomcontent{
-     display: flex;
-     
-   }
-   .bottomtext{
-     display: none;
-   }
-   .goto{
-     display: none;
-   }
-   .gotoinput{
-     display: none;
-   }
-   .name{
-     font-size: 0.75rem;
-   }
-   .TMobiles{
-     font-size: 0.4rem;
-   }
-  
-  }
-  
-  /* Final End After Changes applied finnaly*/
+}
