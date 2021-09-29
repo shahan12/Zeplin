@@ -123,9 +123,14 @@ function onChangeGoToPage(go) {
 function updatepage(go) {
   var spanvalue1 = document.getElementById("goto_lower");
   spanvalue1.textContent = go * limit + 1 - limit;
-
+  if(arrayTr.length/limit >go){
   var spanvalue2 = document.getElementById("goto_upper");
-  spanvalue2.textContent = go * limit;
+  spanvalue2.textContent = go * limit ;
+  }
+  else{
+    var spanvalue2 = document.getElementById("goto_upper");
+    spanvalue2.textContent = arrayTr.length;
+  }
 }
 
 let element = document.getElementsByClassName("activeClass");
