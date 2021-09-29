@@ -10,7 +10,7 @@ function selectall(source) {
 
 
 
-  let tableElement = document.querySelector("table");
+let tableElement = document.querySelector("table");
 let tableBody = tableElement.tBodies[0];
 let tr = Array.from(tableBody.querySelectorAll("tr"));
 let ul = document.querySelector("ul");
