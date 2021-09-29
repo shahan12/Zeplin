@@ -15,7 +15,7 @@ function toggleNavbar() {
   let checkClass = document.getElementById("side-navbar");
   console.log(checkClass);
   if (checkClass.className === "navbar") {
-    checkClass.className += "close";
+    checkClass.className = "close";
   } else {
     checkClass.className = "navbar";
   }

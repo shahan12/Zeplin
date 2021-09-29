@@ -96,29 +96,29 @@ function buttonGereration(limit) {
 
 displayTable(10);
 
-function onChangeGoToPage(go) {
-    var noftr = arrayTr.length;
-    var nofPage = Math.ceil(noftr / limit);
-    console.log(go, nofPage);
-    if (go <= nofPage && go > 0) {
-      var goto = go - 1;
-      updatepage(go);
+// function onChangeGoToPage(go) {
+//     var noftr = arrayTr.length;
+//     var nofPage = Math.ceil(noftr / limit);
+//     console.log(go, nofPage);
+//     if (go <= nofPage && go > 0) {
+//       var goto = go - 1;
+//       updatepage(go);
   
-      if (nofPage < goto) {
-        return;
-      }
-      let offset = goto * limit;
-      tableBody.innerHTML = "";
-      for (let i = offset; i < offset + limit; i++) {
-        if (arrayTr[i] != null) {
-          tableBody.appendChild(arrayTr[i]);
-        } else {
-          break;
-        }
-      }
-    }
-  }
-  const GoToPage = debounce((go) => onChangeGoToPage(go));
+//       if (nofPage < goto) {
+//         return;
+//       }
+//       let offset = goto * limit;
+//       tableBody.innerHTML = "";
+//       for (let i = offset; i < offset + limit; i++) {
+//         if (arrayTr[i] != null) {
+//           tableBody.appendChild(arrayTr[i]);
+//         } else {
+//           break;
+//         }
+//       }
+//     }
+//   }
+  // const GoToPage = debounce((go) => onChangeGoToPage(go));
 
 function updatepage(go) {
   var spanvalue1 = document.getElementById("goto_lower");

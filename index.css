@@ -325,6 +325,7 @@ section {
 }
 
 .btn {
+  width: 1rem;
   border-radius: 50%;
   background-color: #dfe3e7;
   color: #9b9b9b;
@@ -413,6 +414,7 @@ section {
   padding: 0.5rem 1.2rem 2rem 1.2rem;
   background-color: #ffffff;
   border-radius: 4px;
+  height: calc(100vh - 16rem);
 }
 
 .newGroup {
@@ -491,6 +493,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   color: #4a4a4a;
+  height: calc(100vh - 27rem);
 }
 
 thead,
@@ -522,7 +525,7 @@ tr:not(:last-child) {
 
 tbody {
   display: block;
-  height: 20rem;
+  height: calc(100vh - 26.5rem);
 
   overflow: scroll;
   border-bottom: solid 1px #e8e9eb;
@@ -780,11 +783,6 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-  tbody {
-    height: 16.5rem;
-    transition: all 0.3s ease;
-  }
-
   .tableOutlet {
     padding-bottom: 1rem;
     transition: all 0.3s ease;
@@ -816,13 +814,15 @@ ul li.list:hover a {
   section {
     margin-left: 30%;
   }
-  .navbarclose {
+  .close {
     transform: translate(1%);
     z-index: 1;
     width: 14rem;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   }
-
+  .tbody{
+    height: 17rem;
+  }
   
 
 }
@@ -857,9 +857,6 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-  aside {
-    width: 25%;
-  }
 
   section {
    
@@ -902,7 +899,7 @@ ul li.list:hover a {
   .side-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-    transition: all 0.3s ease;
+   
   }
 
   .allDetailLogo {
@@ -928,7 +925,7 @@ ul li.list:hover a {
     transition: all 0.3s ease-in-out;
   }
 
-  .navbarclose {
+  .close {
     transform: translate(1%);
     z-index: 1;
     width: 14rem;
@@ -950,22 +947,19 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-  .group {
+  /* .group {
     height: 2rem;
     padding: 0.4rem 0;
     transition: all 0.3s ease-in-out;
-  }
+  } */
 
-  .groupName,
+  
   .addGroup {
     font-size: 0.6rem;
     transition: all 0.3s ease;
   }
 
-  .groupName {
-    margin-bottom: 0.1rem;
-    transition: all 0.3s ease;
-  }
+  
 
   .groupLogo {
     padding: 0 0.3rem;
@@ -979,10 +973,6 @@ ul li.list:hover a {
     flex-grow: 0;
   }
 
-  .mentorName {
-    font-size: 0.45rem;
-    transition: all 0.3s ease;
-  }
 
   .addGroup {
     padding: 0 0.3rem;
@@ -999,11 +989,13 @@ ul li.list:hover a {
   header {
     justify-content: center;
   }
-
+  .tableTop{
+    flex-direction: column;
+  }
   .rightTop {
     display: flex;
-    align-items: center;
     transition: all 0.3s ease;
+    justify-content: unset;
   }
 
   .rightHead {
@@ -1012,9 +1004,16 @@ ul li.list:hover a {
   }
 
   .inputGroup {
-    width: 5rem;
+    width: 10rem;
     font-size: 0.5rem;
     transition: all 0.3s ease;
+   
+    position: relative;
+  }
+  .bx{
+    position: absolute;
+    padding-left: 0.2rem;
+    
   }
 
   .newGroup {
@@ -1044,10 +1043,7 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-  .mentorName {
-    display: none;
-  }
-
+ 
   .groupNameLink {
     width: 100px;
     display: block;
@@ -1115,12 +1111,12 @@ ul li.list:hover a {
   }
 
   .inputGroup {
-    width: 5rem;
+    width: 8rem;
     transition: all 0.3s ease;
   }
 
   .newGroup {
-    margin: 0;
+   width: 6rem;
   }
 
   .bottomOptions {
@@ -1151,22 +1147,43 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 }
+@media only screen and (max-width: 1440px){
+  tbody{
+    height: calc(100vh - 26rem);
+  }
+  .tableOutlet{
+    height: calc(100vh - 15rem);
+  }
+}
+@media only screen and (max-height: 450px){
+  tbody{
+    height: 17rem !important;
+  }
+  .tableOutlet{
+    height: 100%;
+  }
+}
 
-
-@media only screen and (max-width: 4000px) and (min-width: 1800px) {
+ @media only screen and (max-width: 4000px) and (min-width:2500px) { 
   html {
     font-size: 32px;
   }
   .groupNameLink {
     width: max-content;
   }
+  .tableOutlet{
+    height: calc(100vh - 16rem);
+  }
   tbody {
-    height: calc(100vh - 31rem);
+    height: calc(100vh - 25rem);
   }
   .checkbox{
-    width: 0.7rem;
+    width: 1rem;
+    height: 0.6rem;
 }
   .groupLogotable{
       width: 1.2rem;
   }
+ 
 }
+
