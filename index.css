@@ -73,7 +73,6 @@ header {
   height: 3.5rem;
   padding: 0.5rem 0;
   background-color: #ffff;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
@@ -82,7 +81,7 @@ header {
 .leftHead {
   display: flex;
   align-items: center;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
 
@@ -141,7 +140,9 @@ header {
   color: #77797c;
   font-weight: bold;
 }
-
+.root{
+  position: relative;
+}
 
 
 aside {
@@ -149,7 +150,7 @@ aside {
   height: 100%;
   position: fixed;
   background-color: #ffff;
-  margin-top: -18px;
+ 
   padding-top: 0.7rem;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
@@ -281,7 +282,11 @@ hr {
 
 
 section {
-  margin: 4rem 2rem 0 15rem;
+  position: absolute;
+  width: calc(100vw - 13.5rem);
+  left: 13.5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
   background-color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
@@ -811,9 +816,7 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-  section {
-    margin-left: 30%;
-  }
+ 
   .close {
     transform: translate(1%);
     z-index: 1;
@@ -841,7 +844,10 @@ ul li.list:hover a {
     text-align: right;
     transition: all 0.3s ease;
   }
-
+  section{
+    left: 0;
+    width: 100vw;
+  }
   .inputGroup {
     text-align: left;
     width: 8rem;
@@ -857,11 +863,6 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-
-  section {
-   
-    margin-left: 4%;
-  }
  
   .sub2,
   .request {
@@ -921,14 +922,14 @@ ul li.list:hover a {
   }
 
   aside {
-    transform: translate(-200%);
+    transform: translate(-100%);
     transition: all 0.3s ease-in-out;
   }
 
   .close {
-    transform: translate(1%);
+    transform: translate(0px);
     z-index: 1;
-    width: 14rem;
+    
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   }
 
@@ -942,10 +943,6 @@ ul li.list:hover a {
     transition: all 0.3s ease;
   }
 
-  section {
-    margin: 4rem 2rem 2rem 2rem;
-    transition: all 0.3s ease;
-  }
 
   /* .group {
     height: 2rem;
@@ -1002,10 +999,14 @@ ul li.list:hover a {
     margin-right: 0.2rem;
     transition: all 0.3s ease;
   }
+  .tableTop{
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 
   .inputGroup {
     width: 10rem;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     transition: all 0.3s ease;
    
     position: relative;
@@ -1095,6 +1096,9 @@ ul li.list:hover a {
     font-size: 0.8rem;
     transition: all 0.3s ease;
   }
+  .actions{
+    padding-left: 0 
+  }
 
   .groupNameLink {
     width: 100px;
@@ -1103,7 +1107,9 @@ ul li.list:hover a {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-
+  section{
+    padding: 0 1rem;
+  }
 
   .bottom {
     font-size: 0.7rem;
@@ -1139,13 +1145,10 @@ ul li.list:hover a {
   }
 
   .leftHead {
-    padding: 0;
+    padding: 0.8rem;
   }
 
-  section {
-    margin: 4rem 0.5rem 2rem 0.5rem;
-    transition: all 0.3s ease;
-  }
+
 }
 @media only screen and (max-width: 1440px){
   tbody{
